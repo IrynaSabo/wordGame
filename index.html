@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Word Game</title>
+  </head>
+  <body>
+    <div id="main">
+      <section id="info">
+        <div id="rools">
+          <p id="text">
+            Datorn väljer ett ord och du ska gissa fram vilket ord är det. För
+            varje rätt gissade bockstav får du en poäng. Max antal försök är 10.
+            Lycka till!
+          </p>
+          <button id="start" onclick="Start()">Start</button>
+        </div>
+      </section>
+      <section id="randomWord">
+        <div id="wordContainer" class="grid-container"></div>
+      </section>
+      <section id="score">
+        <div id="user">
+          <h3>Dina poäng:</h3>
+          <p id="usersPoints">0</p>
+        </div>
+        <h3>Fel bockstäver</h3>
+        <div id="wrongLetters"></div>
+      </section>
+      <section id="input" style="display: none;">
+        <div id="letterInput">
+          <input
+            id="char"
+            value=""
+            type="text"
+            placeholder="Skriv en bokstav..."
+          />
+          <button id="submit" onclick="Game()">Submit</button>
+        </div>
+        <p id="message"></p>
+      </section>
+      <section id="images"></section>
+      <button id="reload" onclick="reloadGame()" style="display: none;">
+        Spela igen
+      </button>
+    </div>
+
+    <script src="src/side.js"></script>
+  </body>
+</html>
