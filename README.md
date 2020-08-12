@@ -1,4 +1,4 @@
-# wordGame
+# wordGame - Hangman(Häng Gubben)
 
 Select a letter to figure out a hidden word in a set amount of chances
 
@@ -6,6 +6,7 @@ Select a letter to figure out a hidden word in a set amount of chances
 
 - Generate a random word
 - Display word in UI with correct letters
+- Display points
 - Display wrong letters
 - Show message on win or lose
 - Play again button to reset game
