@@ -2,11 +2,14 @@ body {
   background-color: rgb(11, 2, 59);
   color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #main {
   margin: 20px;
   width: 90vw;
+  height: 90vh;
 }
 #info {
   text-align: center;
@@ -18,24 +21,27 @@ body {
 }
 #wordContainer {
   background-color: rgb(241, 243, 236);
+  margin-bottom: 8px;
 }
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto;
   grid-gap: 10px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .grid-container > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
   font-size: 30px;
   color: black;
 }
 #usersPoints {
   color: green;
-  font-size: 1.8em;
+  font-size: 1.6em;
+  padding-top: 35px;
+  margin: 6px;
 }
 #wrongLetters > p {
   color: red;
@@ -48,9 +54,22 @@ button {
   height: 20px;
   text-align: center;
   background-color: rgb(231, 231, 114);
-  border-radius: 8px;
-  border: 1px solid black;
+  border-radius: 5px;
+  border: rgb(240, 240, 40) 1px solid;
 }
 #message {
   font-size: 2em;
+}
+#canvas {
+  background-color: white;
+  border-radius: 5px;
+}
+#score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#score > div {
+  margin: 10px;
+  padding: 5px;
 }
