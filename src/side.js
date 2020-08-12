@@ -28,7 +28,6 @@ function Start() {
   } else {
     selectedWord = words[Math.floor(Math.random() * words.length)];
     lettersOfSelectedWord = selectedWord.split("");
-    console.log(lettersOfSelectedWord);
     createDivForLetters(lettersOfSelectedWord);
     document.getElementById("input").style.display = "block";
     document.getElementById("info").style.display = "none";
@@ -52,7 +51,6 @@ function Game() {
       if (e === usersChoisOfLetter) a.push(i);
       return a;
     }, []);
-    console.log(indexes.length);
     matchLetters(charCollection, indexes, usersChoisOfLetter);
     checkTheAnswer(indexes, usersChoisOfLetter);
     document.getElementById("char").value = "";
@@ -80,7 +78,6 @@ function checkTheAnswer(indexes, letter) {
     usPoints += indexes.length;
     usersPoints.innerHTML = usPoints;
     message.innerHTML = randomCongratulation();
-    console.log(usPoints);
     if (usPoints === lettersOfSelectedWord.length) {
       message.innerHTML = "Grattis du vann spelet!";
       gameOver();
@@ -94,7 +91,7 @@ function checkTheAnswer(indexes, letter) {
         let t = document.createTextNode(letter);
         p.appendChild(t);
         wrongLettersDiv.appendChild(p);
-        drowFigur(wrongLetters);
+        drawFigur(wrongLetters);
       });
     } else {
       gameOver();
@@ -109,14 +106,14 @@ function gameOver() {
   document.getElementById("reload").style.display = "block";
 }
 
-function drowFigur(wrongLetters) {
+function drawFigur(wrongLetters) {
   if (wrongLetters.length !== 0) {
     for (let i = 0; i < wrongLetters.length; i++) {
-      drow(i);
+      draw(i);
     }
   }
 }
-function drow(i) {
+function draw(i) {
   switch (i) {
     case 0:
       ctx.beginPath();
